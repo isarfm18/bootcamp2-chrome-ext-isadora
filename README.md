@@ -1,6 +1,6 @@
 # Resumindo — Link Saver
 
-Extensão para Google Chrome (Manifest V3) que permite salvar a aba atual e links do menu de contexto diretamente em um popup, sem backend. Todos os dados são armazenados localmente (`chrome.storage.local`).
+Extensão para Google Chrome (Manifest V3) que permite salvar a aba atual e links do menu de contexto diretamente em um popup. Todos os dados são armazenados localmente (`chrome.storage.local`).
 
 ---
 
