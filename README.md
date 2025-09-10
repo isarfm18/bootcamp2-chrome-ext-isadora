@@ -26,21 +26,21 @@ Extensão para Google Chrome (Manifest V3) que permite salvar a aba atual e link
 ---
 
 ## Estrutura de Pastas
-
+## Estrutura de Pastas
+```
 link-saver-extension/
 ├─ src/
 │ ├─ popup/ # Popup HTML, CSS e JS
-│ ├─ background/ # Service worker (eventos, contextMenus)
-│ ├─ content/ # Scripts injetados (opcional)
+│ ├─ background/ # Service worker 
+│ ├─ content/ # Scripts injetados
 │ ├─ assets/ # Imagens e logos
 │ └─ styles/ # CSS global
-├─ icons/ # Ícones da extensão (16, 32, 48, 128px)
+├─ icons/ # Ícones da extensão 
 ├─ docs/ # GitHub Pages (index.html)
 ├─ manifest.json # MV3
-├─ README.md # Este arquivo
+├─ README.md 
 └─ LICENSE # Licença MIT
-
-
+```
 ---
 
 ## GitHub Pages
