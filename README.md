@@ -27,6 +27,7 @@ Extensão para Google Chrome (Manifest V3) que permite salvar a aba atual e link
 
 ## Estrutura de Pastas
 
+```
 link-saver-extension/
 ├─ src/
 │ ├─ popup/ # Popup HTML, CSS e JS
