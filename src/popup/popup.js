@@ -5,7 +5,7 @@ const copyBtn = document.getElementById('copyAll');
 const exportBtn = document.getElementById('exportJson');
 const clearBtn = document.getElementById('clearAll');
 
-// Storage helpers
+
 async function getLinks() {
     const { links = [] } = await chrome.storage.local.get(['links']);
     return links;
@@ -71,7 +71,7 @@ function render(links, q = '') {
     }
 }
 
-// Save current tab
+
 saveBtn.addEventListener('click', async () => {
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     const tab = tabs[0];
@@ -90,7 +90,7 @@ saveBtn.addEventListener('click', async () => {
     }
 });
 
-// Copy all
+
 copyBtn.addEventListener('click', async () => {
     const links = await getLinks();
     const text = links.map(l => `- ${l.title} — ${l.url}`).join('\n');
@@ -103,7 +103,7 @@ copyBtn.addEventListener('click', async () => {
     }
 });
 
-// Export JSON
+
 exportBtn.addEventListener('click', async () => {
     const links = await getLinks();
     const blob = new Blob([JSON.stringify(links, null, 2)], { type: 'application/json' });
@@ -118,18 +118,18 @@ exportBtn.addEventListener('click', async () => {
     URL.revokeObjectURL(url);
 });
 
-// Clear all
+
 clearBtn.addEventListener('click', async () => {
     if (!confirm('Tem certeza que deseja apagar todos os links?')) return;
     await setLinks([]);
     render([]);
 });
 
-// Live search
+
 searchEl.addEventListener('input', async (e) => {
     const links = await getLinks();
     render(links, e.target.value);
 });
 
-// Initial render
+
 getLinks().then(links => render(links));
