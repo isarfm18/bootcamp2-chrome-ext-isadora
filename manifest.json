@@ -23,5 +23,16 @@
         "contextMenus"
     ],
     "host_permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content/content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
     "minimum_chrome_version": "114"
 }
