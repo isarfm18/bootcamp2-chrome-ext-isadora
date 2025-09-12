@@ -1,32 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumindo — Link Saver</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
-    <header>
-        <h1>Resumindo — Link Saver</h1>
-        <p>Salve a aba atual e links do botão direito em uma lista rápida dentro do popup.</p>
-    </header>
-    <main>
-        <h2>Instalação</h2>
-        <ol>
-            <li>Acesse <code>chrome://extensions</code> e ative <strong>Developer mode</strong>.</li>
-            <li>Clique em <em>Load unpacked</em> e selecione a pasta do projeto.</li>
-            <li>Abra o popup da extensão.</li>
-        </ol>
+    <div class="popup-container">
+        <h1>Link Saver</h1>
 
-        <h2>Uso</h2>
-        <ul>
-            <li>Salvar aba atual via popup.</li>
-            <li>Salvar link ou página via botão direito (context menu).</li>
-            <li>Filtrar, remover, copiar ou exportar links no popup.</li>
-        </ul>
-    </main>
+        <button id="saveCurrent" title="Salvar aba" class="small-btn">Salvar aba</button>
+
+        <input id="search" placeholder="Cole o link aqui" class="large-input" />
+
+        <div class="actions">
+            <button id="copyAll">Copiar</button>
+            <button id="exportJson">Exportar</button>
+            <button id="clearAll">Limpar</button>
+        </div>
+
+        <ul id="list" class="list" aria-live="polite"></ul>
+
+        <footer>
+            <small>Armazena dados apenas no seu navegador (chrome.storage.local).</small>
+        </footer>
+    </div>
+
+    <!-- IMPORTANTE: carregar o script do popup -->
+    <script src="popup.js"></script>
 </body>
-
 </html>

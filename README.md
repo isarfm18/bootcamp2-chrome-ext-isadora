@@ -26,7 +26,7 @@ Extensão para Google Chrome (Manifest V3) que permite salvar a aba atual e link
 ---
 
 ## Estrutura de Pastas
-
+```
 link-saver-extension/
 ├─ src/
 │ ├─ popup/ # Popup HTML, CSS e JS
@@ -34,19 +34,17 @@ link-saver-extension/
 │ ├─ content/ # Scripts injetados (opcional)
 │ ├─ assets/ # Imagens e logos
 │ └─ styles/ # CSS global
-├─ icons/ # Ícones da extensão (16, 32, 48, 128px)
+├─ icons/ # Ícones da extensão 
 ├─ docs/ # GitHub Pages (index.html)
 ├─ manifest.json # MV3
-├─ README.md # Este arquivo
+├─ README.md 
 └─ LICENSE # Licença MIT
-
-
+```
 ---
 
 ## GitHub Pages
 
-- Publicar a landing page em `docs/index.html`.
-- Link recomendado: `https://<usuario>.github.io/<repo>/`
+- https://isarfm18.github.io/bootcamp2-chrome-ext-isadora/
 
 ---
 
