@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumindo — Link Saver</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <h1>Link Saver</h1>
+
+        <button id="saveCurrent" title="Salvar aba" class="small-btn">Salvar aba</button>
+
+        <input id="search" placeholder="Cole o link aqui" class="large-input" />
+
+        <div class="actions">
+            <button id="copyAll">Copiar</button>
+            <button id="exportJson">Exportar</button>
+            <button id="clearAll">Limpar</button>
+        </div>
+
+        <ul id="list" class="list" aria-live="polite"></ul>
+
+        <footer>
+            <small>Armazena dados apenas no seu navegador (chrome.storage.local).</small>
+        </footer>
+    </div>
+
+    
+    <script src="popup.js"></script>
+</body>
+</html>

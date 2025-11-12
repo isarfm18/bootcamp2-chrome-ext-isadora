@@ -1,0 +1,16 @@
+{
+  "name": "link-saver-extension",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-extension.mjs",
+    "test:e2e": "playwright test --reporter=list,html",
+    "test": "npm run build && npm run test:e2e",
+    "ci": "npm ci && npm run test",
+    "clean": "rm -rf dist playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "archiver": "^5.3.1"
+  }
+}

@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  e2e:
+    build: .
+    image: link-saver-ext-e2e:latest
+    environment:
+      - CI=true
+    volumes:
+      - ./:/app:cached
+    working_dir: /app
+    shm_size: "2gb"
+    # comando padrão do Dockerfile executa os testes; para sobrepor:
+    command: npm run test:e2e
